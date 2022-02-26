@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>me.jackscode.timedfly.modules</groupId>
+    <groupId>me.jackscode.timedfly.modules.timermessages</groupId>
     <artifactId>TimerMessages</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -13,7 +13,7 @@
 
     <properties>
         <java.version>1.8</java.version>
-        <server.path>/SomeServer/plugins/</server.path>
+        <server.path>C:\Users\tferm\Downloads\mc server\plugins\TimedFly\modules</server.path>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -60,7 +60,7 @@
                             <target name="Copy the target jar to the test minecraft server">
                                 <copy todir="${server.path}">
                                     <fileset dir="${project.build.directory}">
-                                        <include name="**/${name}*.jar"/>
+                                        <include name="**/${name}-${version}.jar"/>
                                     </fileset>
                                 </copy>
                             </target>
@@ -101,7 +101,7 @@
             <version>5.0.0-SNAPSHOT</version>
             <scope>system</scope>
             <!--CHANGE LATER-->
-            <systemPath>${project.basedir}/../../../Java/TimedFly5/target/TimedFly-5.0.0-SNAPSHOT.jar</systemPath>
+            <systemPath>${project.basedir}/../TimedFly/target/TimedFly-5.0.0-SNAPSHOT.jar</systemPath>
         </dependency>
     </dependencies>
 </project>
