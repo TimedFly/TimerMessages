@@ -7,9 +7,9 @@ import me.jackscode.timedfly.exceptions.CommandException;
 public final class TimerMessages extends Module {
 
     @Override public void onModuleEnable() {
-        this.getPlugin().registerEvents(new TimedFlyEventsListener());
+        this.registerEvents(new TimedFlyEventsListener());
         try {
-            this.getCommandHandler().register(new TimeLeft());
+            this.getCommandHandler().register(new TimeLeft(), this);
         } catch (CommandException e) {
             e.printStackTrace();
         }
